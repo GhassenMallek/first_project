@@ -1,0 +1,37 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" th:href="@{/css/main.css}" />
+
+</head>
+
+<body>
+	<h1>Liste étudiants </h1>
+	<h3>pour ajouter un etidiant cliquer <a th:href="@{/etudiant/add}"> ici</a> </h3>
+	<table align="center" border="1" class="table">
+		<tr align="center">
+			<th>ID</th>
+			<th>nom</th>
+			<th>email</th>
+			<th>update</th>
+			<th>delete</th>
+
+		</tr>
+
+		<tr th:each="etudiant : ${students}" align="center">
+			<td th:text="${etudiant.id}"></td>
+			<td th:text="${etudiant.nom}"></td>
+			<td th:text="${etudiant.email}"></td>
+			<td><a th:href="@{/etudiant/update/{id}/(id=${etudiant.id})}" class="btn btn-warning" />modifier</td>
+			<td><a th:href="@{/etudiant/delete/{id}(id=${etudiant.id})}" class="btn btn-danger" />supprimer</td>
+			
+		</tr>
+	</table>
+
+
+</body>
+
+
+</html>

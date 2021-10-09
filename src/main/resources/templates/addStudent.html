@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<title>Ajout etudiant</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" th:href="@{/css/main.css}" />
+
+
+</head>
+
+<body>
+
+	<h1 align="center">ajouter etudiant</h1>
+	<form action="add" method="POST">
+		<div class="container">
+			<div class="row">
+				<div class="col-6" align="right">
+					<label>id</label>
+				</div>
+				<div class="col-6">
+					<input type="number" name="id" />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-6" align="right">
+					<label align="right">nom</label>
+				</div>
+				<div class="col-6" >
+					<input type="text" name="nomEtudiant" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6" align="right">
+					<label align="right">email</label>
+				</div>
+				<div class="col-6">
+					<input type="text" name="email" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col" align="center">
+					<input class="btn btn-success" type="submit" value="Ajouter" />
+				</div>
+			</div>
+		
+
+	</form>
+
+</body>
+
+
+</html>
